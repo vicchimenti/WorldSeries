@@ -30,7 +30,7 @@ def world_series(n, p):
 games = input('\nEnter the number of games in the series: \n')
 probability = input('\nEnter the chances of your team winning as a positive decimal less than or equal to one: \n')
 
-chances = world_series(int(games), int(probability))
+chances = world_series(float(games), float(probability))
 
 print('\n Your team will play in a '
       + str(games) + ' series with a '

@@ -36,9 +36,11 @@ chances = world_series(int(games), float(probability))
 
 #c = chances.decimal(2)
 print('\n Your team will play in a '
-      + str(games) + ' series with a '
+      + str(games) + ' game series with a '
       + str(probability)
-      + ' probablity of winning each game.')
+      + ' probability of winning each game.')
 print('\n Their chances of winning the series is: '
-      + str(round(chances, 2)))
+      + str(round(chances, 2))
+      + ' out of 1')
+
 

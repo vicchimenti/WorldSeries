@@ -1,3 +1,5 @@
+import decimal
+
 '''
 Probability Predictor
 Evaluates probability of winning w games in a series of n games
@@ -32,10 +34,11 @@ probability = input('\nEnter the chances of your team winning as a positive deci
 
 chances = world_series(int(games), float(probability))
 
+#c = chances.decimal(2)
 print('\n Your team will play in a '
       + str(games) + ' series with a '
       + str(probability)
       + ' probablity of winning each game.')
 print('\n Their chances of winning the series is: '
-      + str(chances))
+      + str(round(chances, 2)))
 

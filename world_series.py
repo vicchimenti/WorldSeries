@@ -19,7 +19,7 @@ def world_series(n, p):
     P[0] = 0
 
     # calculate matrix
-    for i in range (1, wins + 1):
+    for i in range(1, wins + 1):
         for j in range(1, wins + 1):
             P[j] = p*P[j] + q*P[j-1]
 
@@ -27,8 +27,15 @@ def world_series(n, p):
 
 
 # get the parameters from the user
-games = input('Enter the number of games in the series: ')
-probability = input ('Enter the chances of your team winning as a positive decimal less than or equal to one: ')
+games = input('\nEnter the number of games in the series: \n')
+probability = input('\nEnter the chances of your team winning as a positive decimal less than or equal to one: \n')
 
+chances = world_series(int(games), int(probability))
 
+print('\n Your team will play in a '
+      + str(games) + ' series with a '
+      + str(probability)
+      + ' probablity of winning each game.')
+print('\n Their chances of winning are: '
+      + str(chances))
 
